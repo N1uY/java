@@ -3,8 +3,7 @@ package SwordToOffer;
 public class Day32 {
     public String reverseLeftWords(String s, int n) {
         StringBuffer stringBuffer = new StringBuffer();
-        int start = n;
-        for(int i = start;i<s.length();i++){
+        for(int i = n; i<s.length(); i++){
             stringBuffer.append(s.charAt(i));
         }
         for(int j=0;j<n;j++){
