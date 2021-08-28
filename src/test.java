@@ -16,6 +16,8 @@ public static void main (String[] args) {
 //          String [] temp;
 //          temp = s.split("e");
 //          System.out.println(temp.length);
+            int a = 12258;
+            System.out.println(String.valueOf(a).charAt(3));
 
 }
 }
