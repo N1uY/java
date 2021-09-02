@@ -22,7 +22,7 @@ public class Day142 {
                 int nexti = i+lengthAdd[s];
                 int nextj = j+widthAdd[s];
 
-                if(nexti>=0&&nexti<m&&nextj>=0&&nextj<n&&reachAble[nexti][nextj]==false){
+                if(nexti>=0&&nexti<m&&nextj>=0&&nextj<n&& !reachAble[nexti][nextj]){
                     int sum=0;
                     int nextii = nexti;
                     int nextjj = nextj;
@@ -46,7 +46,7 @@ public class Day142 {
 
         for (int i=0;i<m;i++){
             for(int j=0;j<n;j++){
-                if(reachAble[i][j]==true){
+                if(reachAble[i][j]){
                     count++;
 
                 }
@@ -57,7 +57,5 @@ public class Day142 {
         return count;
     }
 
-    public static void main(String[] args) {
-        System.out.println(movingCount(36,11,15));
-    }
+
 }
