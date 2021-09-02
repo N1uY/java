@@ -2,7 +2,7 @@ package SwordToOffer;
 
 public class Node {
 
-        int val;
+        public int val;
         Node next;
         Node random;
 
