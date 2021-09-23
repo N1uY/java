@@ -24,11 +24,16 @@ public static void main (String[] args) {
 //          System.out.println(temp.length);
 //            int a = 12258;
 //            System.out.println(String.valueOf(a).charAt(3));
-    test t = new test();
-    Node x = t.n;
-    System.out.println(x.val);
-    t.changeNode(t.n);
-    x = t.n;
-    System.out.println(x.val);
+//    test t = new test();
+//    Node x = t.n;
+//    System.out.println(x.val);
+//    t.changeNode(t.n);
+//    x = t.n;
+//    System.out.println(x.val);
+    int[] test = {0,1,2,3,4};
+   int[] newtest = Arrays.copyOfRange(test,0,2);
+   for(int t:newtest){
+       System.out.println(t);
+   }
 }
 }
