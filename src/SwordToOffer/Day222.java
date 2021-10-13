@@ -23,7 +23,9 @@ public class Day222 {
             int rel = 0 ;
             int di = 2;
             for(int j=0;j<counts.length;j++) {
-                rel += counts[j]*Math.pow(2,j);
+                rel <<=1;
+                rel |=counts[31-j];
+//                rel += counts[j]*Math.pow(2,j);
             }
             System.out.println(Arrays.toString(counts));
 
@@ -35,5 +37,9 @@ public class Day222 {
         int[] test={1,1,6,1};
         int b= day.singleNumber(test);
         System.out.println(b);
+//        int rel = 0x0;
+//        rel <<=1;
+//        System.out.println(rel);
+
     }
 }
