@@ -6,11 +6,7 @@ import java.time.Month;
 import java.util.*;
 //Java的传值引用真的离谱。。。。。。。。。。。。。。。。
 public class test {
-//    public int[] a;
-    private Node n = new Node(100);
-    private  void changeNode(Node test){
-        n = test;
-    }
+
 public static void main (String[] args) {
 //        LocalDate date = LocalDate.now();
 //        System.out.println(date);
@@ -30,10 +26,7 @@ public static void main (String[] args) {
 //    t.changeNode(t.n);
 //    x = t.n;
 //    System.out.println(x.val);
-    int[] test = {0,1,2,3,4};
-   int[] newtest = Arrays.copyOfRange(test,0,2);
-   for(int t:newtest){
-       System.out.println(t);
+
    }
 }
-}
+

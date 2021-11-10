@@ -6,7 +6,9 @@ public class father {
         public  void aAdd(){
             a++;
         }
-
+        public String stringAdd(Object s,Object b){
+            return "father";
+        }
 
     @Override
     public String toString() {
@@ -17,11 +19,5 @@ public class father {
 
     }
 
-    public static void main(String[] args) {
-        son s = new son();
-        System.out.println(s.getClass().getClass());
-        System.out.println(s.toString());
-
-    }
 }
 
