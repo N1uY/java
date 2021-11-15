@@ -1,31 +1,39 @@
 package Lc;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Lc22 {
-    public Set<String> helper(int n){
-        if(n==0){
-            return new HashSet<>();
-        }
-        if(n==1)
-        {
-            Set<String> set = new HashSet<>();
-            String s = "()";
-            set.add(s);
-            return set;
+    private ArrayList< LinkedList<String>> dp = new ArrayList<>();
 
-        }
-        else {
-            for(int i=0;i<n-1;i++){
-                int j = n-1-i;
-                String newString;
-
-            }
-        }
-
-    }
     public List<String> generateParenthesis(int n) {
 
+            LinkedList<String> r = new LinkedList<>();
+            r.add("");
+            dp.add(r);
+            LinkedList<String> rel =    new LinkedList<String>();
+            rel.add("()");
+            dp.add(rel);
+            for(int k=2;k<=n;k++){
+                LinkedList<String> forK =  new LinkedList<>();
+                for(int i=0;i<k;i++){
+                    int outerNumber = k-1-i;
+                    for(int j=0;j<dp.get(i).size();j++){
+                        for(int l=0;l<dp.get(outerNumber).size();l++){
+                            String tmp = "("+dp.get(i).get(j)+")"+dp.get(outerNumber).get(l);
+                            forK.add(tmp);
+                        }
+                    }
+                }
+                dp.add(forK);
+            }
+            return dp.get(n);
+    }
+
+    public static void main(String[] args) {
+        Lc22 solution = new Lc22();
+        List<String> generate = solution.generateParenthesis(3);
+        System.out.println(generate);
     }
 }
