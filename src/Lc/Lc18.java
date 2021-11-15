@@ -56,9 +56,5 @@ public class Lc18 {
         return result;
     }
 
-    public static void main(String[] args) {
-        Lc18 solution = new Lc18();
-        List<List<Integer>> r = solution.fourSum()
-    }
 }
 
