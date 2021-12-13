@@ -1,13 +1,21 @@
 package CoreJavaVolume;
 
 public class father {
-        protected int a;
-        protected int b;
+    public static void hhh() {
+        System.out.println("hhh");
+    }
+        private int a;
+        private int b;
+
+    public int getA() {
+        return a;
+    }
         public  void aAdd(){
             a++;
         }
         public String stringAdd(Object s,Object b){
             return "father";
+
         }
 
     @Override
@@ -19,5 +27,9 @@ public class father {
 
     }
 
+    public static void main(String[] args) {
+        father f = new father();
+        f.hhh();
+    }
 }
 

@@ -46,11 +46,5 @@ public class Employee {
     public static void main(String[] args) {
         Employee e1 = new Employee("ny",1000000,2020,9,26);
         Employee e2 = new Employee("cfl",100000,2020,9,26);
-
-        System.out.println(e1.getName());
-        e2.setOtherName(e1);
-        System.out.println(e1.getName());
-        EmployeeTest t1 = new EmployeeTest();
-
     }
 }
